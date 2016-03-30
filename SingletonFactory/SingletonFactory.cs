@@ -14,9 +14,9 @@ namespace SingletonFactory
         {
             get
             {
-                if (null == _instance)
+                lock (_lockObject)
                 {
-                    lock (_lockObject)
+                    if (null == _instance)
                     {
                         _instance = new T();
                     }

@@ -12,8 +12,8 @@ namespace DesignPattern_PPT
         static void Main(string[] args)
         {
             Decorator_after.BasePizza baconPotatoPizza = new Decorator_after.Pizza();
-            baconPotatoPizza = new Decorator_after.Potato(baconPotatoPizza);
-            baconPotatoPizza = new Decorator_after.Bacon(baconPotatoPizza);
+            baconPotatoPizza = new Decorator_after.PizzaWithPotato(baconPotatoPizza);
+            baconPotatoPizza = new Decorator_after.PizzaWithBacon(baconPotatoPizza);
 
             baconPotatoPizza.PrintDescription();
             Console.WriteLine("피자의 가격은 " + baconPotatoPizza.GetCost() + "원입니다.");

@@ -64,11 +64,11 @@ namespace Decorator_after
         public virtual int GetCost() { return 0; }
     }
 
-    public class Potato : PizzaDecorator
+    public class PizzaWithPotato : PizzaDecorator
     {
         private int _cost = 1000;
 
-        public Potato(BasePizza pizza)
+        public PizzaWithPotato(BasePizza pizza)
         {
             _pizza = pizza;
         }
@@ -85,11 +85,11 @@ namespace Decorator_after
         }
     }
 
-    public class Bacon : PizzaDecorator
+    public class PizzaWithBacon : PizzaDecorator
     {
         private int _cost = 2500;
 
-        public Bacon(BasePizza pizza)
+        public PizzaWithBacon(BasePizza pizza)
         {
             _pizza = pizza;
         }
